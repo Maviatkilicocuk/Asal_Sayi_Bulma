@@ -1,0 +1,27 @@
+package Giris;
+import java.util.Scanner;
+public class Asal_Sayi_Bulma {
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        int x,count=2;
+
+        System.out.print("Lütfen sizin belirlediğiniz sayıya kadar asal sayıların gösterilmesi için sayı giriniz : ");
+        x = input.nextInt();
+
+        do {
+            for (int i = 2; i<=count;i++){
+                if (i<count && count %i ==0 ){
+
+                    break;
+                }else if(i==count) {
+                    System.out.println(count+" Asal sayıdır.");
+                    break;
+                }
+            }
+
+            count +=1;
+        }while(x>=count);
+    }
+}
